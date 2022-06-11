@@ -1,0 +1,56 @@
+body {
+    padding: 0px;
+    border: 0px
+}
+
+header, footer {
+    width : 100%;
+    min-height : 40px;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.product {
+    display: flex;
+    width: 100%;
+    color: white;
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-url {
+    width: 90%;
+    border: 5px solid red;
+    padding: 30px;
+    font-size: 20px;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border: 5px solid red;
+    padding: 20px;
+}
+
+.form-container {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

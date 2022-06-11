@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+</header>
+{% if current_user.is_authenticated %}
+{% if current_user.role == "publisher"%}
+<div class="form-container">
+  <form method="post">
+    <p>Name:</p>
+    <input type="text" name="name" value="{{product.name}}">
+    <p>Download Link:</p>
+    <input type="text" name="download_link" value="{{product.download_link}}">
+    <p>Game:</p>
+    {% if product.game %}
+    <input type="checkbox" name="game" value="on">
+    {% else %}
+    <input type="checkbox" name="game" value="off">
+    {% endif %}
+    <input type="submit">
+  </form>
+</div>
+{% endif %}
+{% endif %}
+<footer>
+</footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header></header>
+Name: {{product.name}}<br>
+
+{% if product.game == True and (current_user.role == "user" or current_user.role == "publisher") %}
+Download: {{product.download_link}}<br>
+{% endif %}
+{% if product.game == True %}
+Product type: Game
+{% else %}
+Product type: App
+{% endif %}
+<footer></footer>
+</body>
+</html>

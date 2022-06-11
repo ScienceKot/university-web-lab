@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header></header>
+{% if current_user.is_authenticated %}
+  {% if current_user.role == "publisher"%}
+    <a href="/add-content">Add content</a>
+    <a href="/edit-content">Edit content</a> <br>
+  {% endif %}
+  Username: {{ current_user.username }}<br>
+  Role: {{ current_user.role }}
+{% endif %}
+<footer></footer>
+</body>
+</html>
